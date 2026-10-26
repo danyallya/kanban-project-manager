@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { FiActivity, FiArchive, FiBell, FiCalendar, FiChevronDown, FiClock, FiCommand, FiFilter, FiGrid, FiLayers, FiMoreHorizontal, FiMoon, FiPlus, FiSearch, FiSettings, FiSun, FiUsers } from 'react-icons/fi';
+import { FiActivity, FiArchive, FiBell, FiCalendar, FiChevronDown, FiClock, FiCommand, FiFilter, FiGrid, FiLayers, FiMoreHorizontal, FiMoon, FiPlus, FiSearch, FiSun, FiUsers } from 'react-icons/fi';
 type Task = { id: number; title: string; project: string; stage: string; due: string; priority: 'Urgent' | 'Normal' | 'Low'; owner: string; tone: string; tag: string };
 const initial: Task[] = [
   { id: 1, title: 'Finalize spring campaign direction', project: 'Northstar / Brand launch', stage: 'up-next', due: 'Today', priority: 'Urgent', owner: 'AM', tone: 'peach', tag: 'Creative' },

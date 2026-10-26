@@ -8,9 +8,9 @@ The foundation presents a four-stage board, task ownership, due dates, prioritie
 Tasks currently live in local React state and reset when the page reloads. The 30-day roadmap adds durable storage, project views, calendar and timeline modes, team collaboration, accessible movement controls, PDF/Excel exports and installable PWA behavior.
 
 ## Run locally
-Use Node.js 20 or newer. The local .npmrc is ignored by Git and points npm to the configured Nexus mirror.
+Use Node.js 20 or newer. The project-local `.npmrc` is ignored by Git because registry configuration is machine-specific. Use `npm ci`; npmjs is an approved fallback if a configured mirror is missing a dependency.
 
-    npm install
+    npm ci
     npm run dev
 
 Use npm test, npm run typecheck and npm run build before a release. The app is responsive across phone, tablet and desktop widths and includes a light and dark theme.

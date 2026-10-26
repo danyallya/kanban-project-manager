@@ -3,9 +3,12 @@
 Review the previous implementation and Git diff, inspect the backlog, and debug open defects first. Add or update tests for changed task behavior, deliver today's scoped feature, run tests/typecheck/build, update documentation and this backlog, then leave tomorrow ready. Record blocked checks with reasons; continue useful code review and static checks. Add newly discovered work with priority and rationale.
 
 ## Foundation status
-Day 00 board foundation is scaffolded with task search, creation, drag movement and theme toggle. Dependencies are not installed and no build/test validation has run. The local Nexus .npmrc is ignored.
+Day 00 board foundation includes task search, creation, drag movement and theme toggle. Dependencies and lockfile are installed; smoke test (1/1), typecheck and production build passed. This Vite template has no standalone lint script. The local Nexus .npmrc is ignored.
 
 ## Daily tickets
+### Day 00 verification
+Nexus returned 404 for packages used by this project. Following the user's approval, dependencies were installed with npmjs fallback; the ignored local .npmrc keeps Nexus as default and contains only required scope overrides. Day 01 has not started.
+
 | Day | Deliverable |
 |---|---|
 | 01 | Specify task/project/label models and stage-transition rules. |
