@@ -27,4 +27,4 @@ Atelier review must preserve one-step task transitions, date-only due dates and 
 
 ## Contributions and examples
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for reproducible reports, genuine collaboration and the planned a small board walkthrough showing valid and invalid transitions. Contributions follow the product backlog and reviewed PR workflow.
+See [CONTRIBUTING.md](CONTRIBUTING.md) for reproducible reports, genuine collaboration and product examples such as a small board walkthrough showing valid and invalid transitions. Contributions follow the product backlog and reviewed PR workflow.
