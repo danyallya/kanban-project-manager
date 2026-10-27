@@ -11,7 +11,7 @@ Nexus returned 404 for packages used by this project. Following the user's appro
 
 | Day | Deliverable |
 |---|---|
-| 01 | Specify task/project/label models and stage-transition rules. |
+| 01 | **Done** — specify task/project/label models, validated date-only due dates, and one-step stage-transition rules; apply rules to board drops. |
 | 02 | Add keyboard-accessible move controls and focused task detail. |
 | 03 | Add task editor with owner, due date, priority and validation. |
 | 04 | Add project switcher and project-specific board state. |
@@ -43,3 +43,6 @@ Nexus returned 404 for packages used by this project. Following the user's appro
 | 30 | Release-candidate review, all checks, release notes and known limits. |
 
 Mark each day Done, In progress or Blocked after work. Update new findings and keep tomorrow's ticket ready.
+
+- Day 01: Done. Sample tasks now use typed project/label references and stage transitions reject skipped steps; next is Day 02, keyboard-accessible move controls and focused task detail.
+- Review carry-over for Day 02: native drag-and-drop still has no keyboard alternative, and invalid drops currently leave the task in place without announcing why.
