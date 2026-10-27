@@ -17,3 +17,10 @@
 - Documentation: README documents board types and transition semantics; BACKLOG marks Day 01 done and records the remaining keyboard and invalid-drop announcement work for Day 02.
 - Git: implementation commit `af7afae` (`feat: define typed board models and stage rules`) is pushed to `day-01/task-models` and fast-forwarded to `main`. This daily-log entry is included in the final synchronization of both branches. No `.npmrc`, environment files, credentials, or generated build output are tracked.
 - Next: Day 02 — add keyboard-accessible move controls and focused task detail.
+
+## Review workflow maintenance — 2026-10-27
+
+- The user requested careful sequential project execution, commit content/counts suited to each product and an independent branch/PR per repository with panel review and merge.
+- Atelier review must preserve one-step task transitions, date-only due dates and ownership while proving keyboard alternatives to board dragging and announcing rejected moves. Added a standalone delivery policy and entry points in AGENTS, README and BACKLOG.
+- Documentation-only maintenance on `docs/atelier-board-review`; Markdown diff reviewed and `git diff --check` used. No application tests/build rerun for this process change. Next product work: Day 02 — keyboard-accessible move controls and focused task detail.
+- This is the pre-merge log state. The portfolio workspace DELIVERY-RECEIPTS.md records the actual PR URL, checked head, panel gates, merge SHA and sync afterward; reconcile it here in the next authorized update.

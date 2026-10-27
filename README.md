@@ -20,3 +20,7 @@ Keep the board calm, legible and suitable for real studio work. Preserve task hi
 
 ### Board model and stage rules
 `src/domain/board.ts` defines task, project, label, priority, date, and stage types. Tasks reference projects and labels by ID and store due dates as validated `YYYY-MM-DD` values. A task may move one stage at a time: Up Next ↔ In Progress ↔ In Review ↔ Complete, with the completed task reopening to In Review. The sample board is fictional, stored in local React state, and resets on reload; it is not connected to client work.
+
+## Delivery and review
+
+Atelier review must preserve one-step task transitions, date-only due dates and ownership while proving keyboard alternatives to board dragging and announcing rejected moves. Follow [DELIVERY-POLICY.md](DELIVERY-POLICY.md) from Day 02 for sequential execution, scope-driven commits and this repository's separate branch/PR with GitHub panel review and merge.

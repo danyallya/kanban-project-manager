@@ -8,3 +8,9 @@
 - Update BACKLOG.md daily with status, bugs found, new work and the next day's exact scope.
 - Keep .npmrc ignored and local. Never commit tokens, private client details, .env files or build output. Never force-push or rewrite history.
 - Work only in this repository. Create descriptive day branches and meaningful commits after relevant checks pass.
+
+## Delivery from Day 02
+
+- Read and follow [DELIVERY-POLICY.md](DELIVERY-POLICY.md). Finish Atelier Project Desk and its own PR panel review, merge and sync before the next portfolio repository, or record an exact external blocker. No concurrent project or subagent work.
+- Choose commit counts, boundaries, content and wording from this product's real changes; do not copy a fixed history pattern from other projects.
+- Review the latest pushed head and checks in GitHub and merge through this repository's PR panel. Respect required independent approvals; self-review does not replace them.
