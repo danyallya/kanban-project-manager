@@ -46,3 +46,7 @@ Mark each day Done, In progress or Blocked after work. Update new findings and k
 
 - Day 01: Done. Sample tasks now use typed project/label references and stage transitions reject skipped steps; next is Day 02, keyboard-accessible move controls and focused task detail.
 - Review carry-over for Day 02: native drag-and-drop still has no keyboard alternative, and invalid drops currently leave the task in place without announcing why.
+
+## Process change effective Day 02 — 2026-10-27
+
+Apply [DELIVERY-POLICY.md](DELIVERY-POLICY.md) to every remaining ticket: finish Atelier Project Desk before the next repository, use meaningful scope-driven commits and deliver through its own reviewed PR. A blocked external gate needs a concrete record and next action. This adds delivery gates without moving Day 02–30 product work or changing completed history.
