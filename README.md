@@ -24,3 +24,7 @@ Keep the board calm, legible and suitable for real studio work. Preserve task hi
 ## Delivery and review
 
 Atelier review must preserve one-step task transitions, date-only due dates and ownership while proving keyboard alternatives to board dragging and announcing rejected moves. Follow [DELIVERY-POLICY.md](DELIVERY-POLICY.md) from Day 02 for sequential execution, scope-driven commits and this repository's separate branch/PR with GitHub panel review and merge.
+
+## Contributions and examples
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for reproducible reports, genuine collaboration and the planned a small board walkthrough showing valid and invalid transitions. Contributions follow the product backlog and reviewed PR workflow.
