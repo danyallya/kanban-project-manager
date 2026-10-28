@@ -31,3 +31,11 @@
 - Previous delivery-policy PR #1 is merged in origin/main; this maintenance starts from that merged history. No badge, collaborator, star or accepted answer is claimed.
 - Documentation-only scope on docs/atelier-task-collaboration; reviewed Markdown and git diff --check. App tests/build are not rerun because runtime behavior is unchanged.
 - Publication is pre-merge here; the final PR/head/panel/check/merge/sync evidence goes in the workspace DELIVERY-RECEIPTS.md after completion. Next: Day 02 — keyboard-accessible move controls and focused task detail. Wait for the user's day trigger.
+
+## Day 02 — keyboard task handoffs — 2026-10-28
+
+- Reconciled merged policy/contribution PRs #1/#2 from workspace receipts; started from origin/main 9a24abb. Reviewed task stages, metadata and previous transition diff. Drag-only movement and silent rejected drops were the specific Day 01 carry-over.
+- Added adjacent-stage native buttons, shared transition feedback and a focused non-modal task detail with owner/date/priority. Move from card restores title focus; detail transitions focus the updated heading; Close/Escape restores the opener. Drag cancellation clears its source. Metadata and local-only sample scope are preserved.
+- Final npm test -- --reporter=dot --maxWorkers=1 passed (3 files, 8 tests); npm run build passed including typecheck/PWA; git diff --check passed. No lint script. Tests cover movement/focus, detail metadata/Escape and rejected skipped-stage drop. Read all changed files locally; private configuration/build output excluded.
+- External delivery gate: Work browser access disabled today. Actual browser keyboard/responsive/both-theme review, PR creation, panel Files changed/Checks/conversation review and merge/sync pending. Branch day-02/keyboard-task-handoffs pushed separately; final head in workspace receipt. No badge or CI outcome claimed.
+- Next: finish pending Day 02 panel/UI gates, then Day 03 task editor with owner, due date, priority and validation when triggered.
