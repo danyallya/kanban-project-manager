@@ -28,3 +28,7 @@ Atelier review must preserve one-step task transitions, date-only due dates and 
 ## Contributions and examples
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for reproducible reports, genuine collaboration and product examples such as a small board walkthrough showing valid and invalid transitions. Contributions follow the product backlog and reviewed PR workflow.
+
+## Keyboard task handoffs
+
+Each task title opens a non-modal detail region and focuses its heading. Close or Escape returns focus to that task. Move buttons expose only adjacent legal stages; moving from a card returns focus to its title, and moving within detail refocuses the updated detail heading. Owner, due date, priority and project remain unchanged. Dragging uses the same transition rules and rejected skipped-stage drops announce why. Example: move an Up Next task to In Progress with its move button; dragging directly to Complete is rejected. These remain synthetic session-only records. Browser keyboard/layout/theme inspection is pending while browser access is disabled.

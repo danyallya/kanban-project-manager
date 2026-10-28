@@ -12,7 +12,7 @@ Nexus returned 404 for packages used by this project. Following the user's appro
 | Day | Deliverable |
 |---|---|
 | 01 | **Done** — specify task/project/label models, validated date-only due dates, and one-step stage-transition rules; apply rules to board drops. |
-| 02 | Add keyboard-accessible move controls and focused task detail. |
+| 02 | Implemented, delivery blocked — adjacent-stage buttons, focused task detail and rejected-drop feedback; browser/PR panel gates pending. |
 | 03 | Add task editor with owner, due date, priority and validation. |
 | 04 | Add project switcher and project-specific board state. |
 | 05 | Add filter chips for owner, due date, priority and tag. |
