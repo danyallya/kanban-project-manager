@@ -13,7 +13,7 @@ Nexus returned 404 for packages used by this project. Following the user's appro
 |---|---|
 | 01 | **Done** — specify task/project/label models, validated date-only due dates, and one-step stage-transition rules; apply rules to board drops. |
 | 02 | **Done** — adjacent-stage buttons, focused task detail and rejected-drop feedback; PR #4 merged through the GitHub panel. |
-| 03 | **Implementation done; GitHub delivery blocked** — validated task editor for title, current owner, date-only due date and priority; column quick-add keeps its chosen stage. The latest local branch needs its PR and exact-head panel gates after browser certificate access is restored. |
+| 03 | **Implementation done; GitHub delivery blocked** — validated task editor for title, current owner, date-only due date and priority; column quick-add keeps its chosen stage. The branch is pushed; PR creation and exact-head panel gates await trusted browser access. |
 | 04 | Add project switcher and project-specific board state. |
 | 05 | Add filter chips for owner, due date, priority and tag. |
 | 06 | Add sortable board and saved filter views. |
