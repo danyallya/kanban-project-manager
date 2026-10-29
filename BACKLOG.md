@@ -12,8 +12,8 @@ Nexus returned 404 for packages used by this project. Following the user's appro
 | Day | Deliverable |
 |---|---|
 | 01 | **Done** — specify task/project/label models, validated date-only due dates, and one-step stage-transition rules; apply rules to board drops. |
-| 02 | Implemented, delivery blocked — adjacent-stage buttons, focused task detail and rejected-drop feedback; browser/PR panel gates pending. |
-| 03 | Add task editor with owner, due date, priority and validation. |
+| 02 | **Done** — adjacent-stage buttons, focused task detail and rejected-drop feedback; PR #4 merged through the GitHub panel. |
+| 03 | **Implementation done; GitHub delivery blocked** — validated task editor for title, current owner, date-only due date and priority; column quick-add keeps its chosen stage. The branch is pushed; PR creation and exact-head panel gates await trusted browser access. |
 | 04 | Add project switcher and project-specific board state. |
 | 05 | Add filter chips for owner, due date, priority and tag. |
 | 06 | Add sortable board and saved filter views. |
@@ -44,8 +44,10 @@ Nexus returned 404 for packages used by this project. Following the user's appro
 
 Mark each day Done, In progress or Blocked after work. Update new findings and keep tomorrow's ticket ready.
 
-- Day 01: Done. Sample tasks now use typed project/label references and stage transitions reject skipped steps; next is Day 02, keyboard-accessible move controls and focused task detail.
-- Review carry-over for Day 02: native drag-and-drop still has no keyboard alternative, and invalid drops currently leave the task in place without announcing why.
+- Day 01: Done. Sample tasks now use typed project/label references and stage transitions reject skipped steps.
+- Day 02: Done. PR #4 was reviewed at `2eb07742b61b520c73b416f0c16ded98b03462f4` and merged to `main` with merge commit `44ba555aab350beb30dd1003e84ede025f7bcc84`; the former keyboard and invalid-drop carry-over is delivered.
+- Day 03: Implementation done; the required title, owner initials, date-only due date and priority are validated before a task is created. Stage-specific column quick-add is preserved. The GitHub PR/panel gate remains blocked by the browser's untrusted-certificate warning; see DAILY-LOG.md for the exact next action.
+- Next: Day 04 — add the project switcher and project-specific board state after completing Day 03 delivery gates.
 
 ## Process change effective Day 02 — 2026-10-27
 
