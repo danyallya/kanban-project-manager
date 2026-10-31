@@ -56,6 +56,25 @@ describe('Atelier task editor', () => {
     expect(initialTasks).toHaveLength(6);
   });
 
+  it('creates work in the selected project and keeps it scoped when switching boards', () => {
+    render(<App />);
+    const projectBoard = screen.getByRole('combobox', { name: 'Project board' });
+    fireEvent.change(projectBoard, { target: { value: 'aperture-product' } });
+    fireEvent.click(screen.getByRole('button', { name: 'New task' }));
+    expect(screen.getByText(/before it joins Aperture \/ Product/i)).toBeInTheDocument();
+    fireEvent.change(screen.getByRole('textbox', { name: 'Task title' }), { target: { value: 'Prototype a studio flow' } });
+    fireEvent.change(screen.getByRole('combobox', { name: 'Owner' }), { target: { value: 'JL' } });
+    fireEvent.change(screen.getByLabelText('Due date'), { target: { value: '2026-11-11' } });
+    fireEvent.change(screen.getByRole('combobox', { name: 'Priority' }), { target: { value: 'Normal' } });
+    fireEvent.click(screen.getByRole('button', { name: 'Create task' }));
+
+    expect(screen.getByRole('button', { name: 'Prototype a studio flow' })).toBeInTheDocument();
+    fireEvent.change(projectBoard, { target: { value: 'northstar-brand' } });
+    expect(screen.queryByRole('button', { name: 'Prototype a studio flow' })).not.toBeInTheDocument();
+    fireEvent.change(projectBoard, { target: { value: 'aperture-product' } });
+    expect(screen.getByRole('button', { name: 'Prototype a studio flow' })).toBeInTheDocument();
+  });
+
   it('keeps a column quick-add in the stage that opened the editor', () => {
     render(<App />);
     fireEvent.click(screen.getByRole('button', { name: 'Add to IN PROGRESS' }));

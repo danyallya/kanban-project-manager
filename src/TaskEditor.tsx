@@ -4,9 +4,10 @@ import { validateTaskDraft, type TaskDraft, type TaskDraftErrors, type TaskDraft
 
 const emptyDraft: TaskDraft = { title: '', ownerId: '', dueDate: '', priority: '' };
 
-export function TaskEditor({ owners, stage, onCreate, onCancel }: {
+export function TaskEditor({ owners, stage, projectName, onCreate, onCancel }: {
   owners: string[];
   stage: TaskStage;
+  projectName: string;
   onCreate: (draft: ValidTaskDraft) => void;
   onCancel: () => void;
 }) {
@@ -49,7 +50,7 @@ export function TaskEditor({ owners, stage, onCreate, onCancel }: {
     <div className="task-editor-heading">
       <span className="task-editor-eyebrow">NEW WORK · {TASK_STAGE_LABELS[stage]}</span>
       <h2 id="task-editor-title">New task</h2>
-      <p>Give the work a clear title, owner and due date before it joins the board.</p>
+      <p>Give the work a clear title, owner and due date before it joins {projectName}.</p>
     </div>
     {submitted && Object.keys(errors).length > 0 && <p className="task-editor-summary" role="alert">Review the highlighted fields and try again.</p>}
     <form className="task-editor-form" noValidate onSubmit={submit}>
