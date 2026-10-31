@@ -25,6 +25,9 @@ export type Project = {
   name: string;
 };
 
+export const ALL_PROJECTS_ID = 'all' as const;
+export type ProjectBoardId = Project['id'] | typeof ALL_PROJECTS_ID;
+
 export type Label = {
   id: string;
   name: string;
@@ -41,6 +44,11 @@ export type Task = {
   priority: TaskPriority;
   ownerId: string;
 };
+
+/** Returns the tasks visible on one project board without changing shared task state. */
+export function tasksForProject(tasks: readonly Task[], projectId: ProjectBoardId): Task[] {
+  return projectId === ALL_PROJECTS_ID ? [...tasks] : tasks.filter(task => task.projectId === projectId);
+}
 
 export const TASK_STAGE_LABELS: Record<TaskStage, string> = {
   'up-next': 'UP NEXT',

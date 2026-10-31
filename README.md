@@ -5,7 +5,7 @@ Atelier House coordinates client work across a small creative studio. The Projec
 ## What it supports
 The foundation presents a four-stage board, task ownership, due dates, priorities, team context, search, task creation and drag-and-drop movement. Tailwind CSS establishes utility and responsive foundations while project-specific CSS creates a warm paper-and-olive identity. React Icons supplies navigation and task symbols.
 
-Tasks currently live in local React state and reset when the page reloads. The 30-day roadmap adds durable storage, project views, calendar and timeline modes, team collaboration, accessible movement controls, PDF/Excel exports and installable PWA behavior.
+Tasks currently live in local React state and reset when the page reloads. The project switcher shows all work or one project's board; task stages stay with their project while switching, and new work is created in the selected project. With All projects selected, new work goes to Atelier / New work. The 30-day roadmap adds durable storage, calendar and timeline modes, team collaboration, PDF/Excel exports and installable PWA behavior.
 
 ## Run locally
 Use Node.js 20 or newer. The project-local `.npmrc` is ignored by Git because registry configuration is machine-specific. Use `npm ci`; npmjs is an approved fallback if a configured mirror is missing a dependency.
@@ -35,4 +35,4 @@ Each task title opens a non-modal detail region and focuses its heading. Close o
 
 ## Task creation
 
-New tasks use an editor that requires a title, an owner from the initials already shown on task cards, a valid calendar due date and a supported priority. Field errors are linked to their controls, the first invalid field receives focus, and a valid submission announces the new stage and focuses the created task. Column quick-add creates the task in the column that opened the editor; a search is cleared after creation so the new task is visible. New tasks start in the Atelier / New work project with the Planning label until project and label selection are added. All changes remain in local React state and reset on reload.
+New tasks use an editor that requires a title, an owner from the initials already shown on task cards, a valid calendar due date and a supported priority. Field errors are linked to their controls, the first invalid field receives focus, and a valid submission announces the new stage and focuses the created task. Column quick-add creates the task in the column that opened the editor; a search is cleared after creation so the new task is visible. The editor names the selected destination project, and new tasks use its Planning label. All changes remain in local React state and reset on reload.

@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { initialTasks, labels, projects } from '../data/boardFixtures';
-import { asISODate, canTransitionTask, transitionTask } from './board';
+import { ALL_PROJECTS_ID, asISODate, canTransitionTask, tasksForProject, transitionTask } from './board';
 import { formatDueDate } from './dates';
 
 describe('Atelier task and project contracts', () => {
@@ -25,6 +25,16 @@ describe('Atelier task and project contracts', () => {
     const task = initialTasks[0];
     expect(transitionTask(task, 'in-progress')).toEqual({ ...task, stage: 'in-progress' });
     expect(transitionTask(task, 'complete')).toBeNull();
+  });
+
+  it('shows one project at a time while preserving the shared task collection', () => {
+    const originalTasks = initialTasks;
+    const northstarTasks = tasksForProject(initialTasks, 'northstar-brand');
+
+    expect(northstarTasks.map(task => task.id)).toEqual(['task-001', 'task-003', 'task-006']);
+    expect(tasksForProject(initialTasks, ALL_PROJECTS_ID)).toEqual(initialTasks);
+    expect(initialTasks).toBe(originalTasks);
+    expect(initialTasks).toHaveLength(6);
   });
 
   it('validates ISO calendar dates and formats relative due labels', () => {

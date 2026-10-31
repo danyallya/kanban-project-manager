@@ -13,8 +13,8 @@ Nexus returned 404 for packages used by this project. Following the user's appro
 |---|---|
 | 01 | **Done** — specify task/project/label models, validated date-only due dates, and one-step stage-transition rules; apply rules to board drops. |
 | 02 | **Done** — adjacent-stage buttons, focused task detail and rejected-drop feedback; PR #4 merged through the GitHub panel. |
-| 03 | **Implementation done; GitHub delivery blocked** — validated task editor for title, current owner, date-only due date and priority; column quick-add keeps its chosen stage. The branch is pushed; PR creation and exact-head panel gates await trusted browser access. |
-| 04 | Add project switcher and project-specific board state. |
+| 03 | **Done** — validated task editor for title, current owner, date-only due date and priority; column quick-add keeps its chosen stage. PR #5 was reviewed and merged to `main`; see the Day 04 reconciliation and workspace receipt. |
+| 04 | **Done** — add an accessible project switcher, project-scoped board/counts, preserved task-stage state across switches, and create tasks in the selected project. |
 | 05 | Add filter chips for owner, due date, priority and tag. |
 | 06 | Add sortable board and saved filter views. |
 | 07 | Review week-one board interactions, add tests and fix keyboard/drag defects. |
@@ -46,8 +46,9 @@ Mark each day Done, In progress or Blocked after work. Update new findings and k
 
 - Day 01: Done. Sample tasks now use typed project/label references and stage transitions reject skipped steps.
 - Day 02: Done. PR #4 was reviewed at `2eb07742b61b520c73b416f0c16ded98b03462f4` and merged to `main` with merge commit `44ba555aab350beb30dd1003e84ede025f7bcc84`; the former keyboard and invalid-drop carry-over is delivered.
-- Day 03: Implementation done; the required title, owner initials, date-only due date and priority are validated before a task is created. Stage-specific column quick-add is preserved. The GitHub PR/panel gate remains blocked by the browser's untrusted-certificate warning; see DAILY-LOG.md for the exact next action.
-- Next: Day 04 — add the project switcher and project-specific board state after completing Day 03 delivery gates.
+- Day 03: Done. The required title, owner initials, date-only due date and priority are validated before a task is created. Stage-specific column quick-add is preserved. PR #5 merged after the earlier browser warning was resolved; its merge receipt is reconciled in the Day 04 log.
+- Day 04: Done. The native project selector scopes task cards and column counts, leaves each task's stage in shared session state, and determines the new-task destination. At All projects, creation defaults to Atelier / New work.
+- Next: Day 05 — add filter chips for owner, due date, priority and tag.
 
 ## Process change effective Day 02 — 2026-10-27
 
