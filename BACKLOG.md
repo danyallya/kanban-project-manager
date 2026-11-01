@@ -48,6 +48,7 @@ Mark each day Done, In progress or Blocked after work. Update new findings and k
 - Day 02: Done. PR #4 was reviewed at `2eb07742b61b520c73b416f0c16ded98b03462f4` and merged to `main` with merge commit `44ba555aab350beb30dd1003e84ede025f7bcc84`; the former keyboard and invalid-drop carry-over is delivered.
 - Day 03: Done. The required title, owner initials, date-only due date and priority are validated before a task is created. Stage-specific column quick-add is preserved. PR #5 merged after the earlier browser warning was resolved; its merge receipt is reconciled in the Day 04 log.
 - Day 04: Done. The native project selector scopes task cards and column counts, leaves each task's stage in shared session state, and determines the new-task destination. At All projects, creation defaults to Atelier / New work.
+- Review follow-up for Issue #3: the Day 03 editor already routes quick-add into its selected column; expanded regression coverage now checks all four displayed column actions and their derived counts. Close the issue after the follow-up PR merges.
 - Next: Day 05 — add filter chips for owner, due date, priority and tag.
 
 ## Process change effective Day 02 — 2026-10-27
