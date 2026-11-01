@@ -91,4 +91,23 @@ describe('Atelier task editor', () => {
     const inProgress = screen.getByText('IN PROGRESS').closest('.kanban-column') as HTMLElement;
     expect(within(inProgress).getByRole('button', { name: 'Prepare a review handoff' })).toBeInTheDocument();
   });
+
+  it.each([
+    ['UP NEXT', 2],
+    ['IN PROGRESS', 2],
+    ['IN REVIEW', 1],
+    ['COMPLETE', 1],
+  ])('creates a quick-add task in the %s column and updates its count', (stage, initialCount) => {
+    render(<App />);
+    const column = screen.getByText(stage).closest('.kanban-column') as HTMLElement;
+    fireEvent.click(within(column).getByRole('button', { name: `Add to ${stage}` }));
+    fireEvent.change(screen.getByRole('textbox', { name: 'Task title' }), { target: { value: `Task for ${stage}` } });
+    fireEvent.change(screen.getByRole('combobox', { name: 'Owner' }), { target: { value: 'AM' } });
+    fireEvent.change(screen.getByLabelText('Due date'), { target: { value: '2026-11-12' } });
+    fireEvent.change(screen.getByRole('combobox', { name: 'Priority' }), { target: { value: 'Normal' } });
+    fireEvent.click(screen.getByRole('button', { name: 'Create task' }));
+
+    expect(within(column).getByRole('button', { name: `Task for ${stage}` })).toBeInTheDocument();
+    expect(within(column).getByText(String(initialCount + 1))).toBeInTheDocument();
+  });
 });

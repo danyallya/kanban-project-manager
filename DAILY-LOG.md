@@ -60,3 +60,8 @@
 - Visual review: local desktop preview showed the selector, scoped counts and cards in light and dark themes; keyboard arrows and Enter changed the selected project and the focus ring remained visible. The mobile toolbar has a compact wrapping rule, but a phone-width browser emulation was unavailable during this review. Tasks remain fictional local preview data and still reset when the page reloads.
 - Branch/PR: `day-04/project-board-switcher` is based on synchronized `main` at `ed9a3388b3dafd9e7364a51b4b0ecba3850986fa`; feature commit `c3c3ff821aa006c11fd3bec1567e7b7ef6df73eb` is pushed. PR [#6](https://github.com/danyallya/kanban-project-manager/pull/6) targets `main`. It was open with no configured checks, comments or base conflicts at creation. This log update will also be included in the PR; final-head file review and merge are pending. No external contribution or achievement is claimed.
 - Next: Day 05 — add filter chips for owner, due date, priority and tag after Day 04 delivery gates complete.
+
+## Review follow-up — Issue #3 column quick-add destination — 2026-11-01
+
+- Reconciled the open Day 01–02 finding against merged Day 03: the editor already receives the selected column stage, but prior regression coverage only exercised IN PROGRESS. Added cases for UP NEXT, IN PROGRESS, IN REVIEW and COMPLETE, asserting each new task lands in the named column and its count increments.
+- The fix branch is `fix/column-quick-add-stage-issue`. Checks passed: `npm test -- --maxWorkers=1` (5 files / 22 tests), `npm run typecheck`, `npm run build` including PWA generation, and `git diff --check`. PR/panel delivery is pending; Issue #3 stays open until that PR merges.
