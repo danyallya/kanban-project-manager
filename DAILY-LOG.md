@@ -65,3 +65,13 @@
 
 - Reconciled the open Day 01–02 finding against merged Day 03: the editor already receives the selected column stage, but prior regression coverage only exercised IN PROGRESS. Added cases for UP NEXT, IN PROGRESS, IN REVIEW and COMPLETE, asserting each new task lands in the named column and its count increments.
 - The fix branch is `fix/column-quick-add-stage-issue`. Checks passed: `npm test -- --maxWorkers=1` (5 files / 22 tests), `npm run typecheck`, `npm run build` including PWA generation, and `git diff --check`. PR/panel delivery is pending; Issue #3 stays open until that PR merges.
+
+## Day 05 — board filter chips — 2026-11-02 (Asia/Tehran)
+
+- Startup review: fetched `origin/main` after the Day 04 PR and quick-add follow-up; branch was clean and current. Reviewed the project-scoped board, typed task fields, due-date helpers and earlier search behavior. The toolbar Filter action was inert and did not narrow the board.
+- Implementation: added composable owner, due-window, priority and tag filters; due windows use ISO calendar-day comparisons (overdue, today through the next seven days, and later). The toolbar exposes an accessible filter panel, active criteria render as removable chips, Clear all resets them, and board/column counts use filtered results. Search still combines with the filters; task records and metadata are not modified.
+- Regression evidence: domain tests cover combined criteria, bounded due windows and no mutation; UI test covers filtering, the count, chip removal availability and clear-all. `npm test -- --reporter=dot` passed (6 files, 25 tests); `npm run typecheck` passed; `npm run build` passed (Vite/PWA); `git diff --check` passed. No standalone lint script is configured.
+- Contribution evidence: the tested synthetic sample filter case documents the combined selection; no new issue, collaborator, external post or profile award is claimed.
+- Browser review: local desktop preview exposed all four labeled filter controls; changing Owner to AM narrowed the board count to 2 and showed a removable chip; Clear all restored the six-task board. No phone-width visual emulation was performed.
+- Branch `day-05/board-filter-chips` starts at fetched `origin/main`. PR creation, exact-head panel review, checks/conversation review, merge and synchronization remain pending. No `.npmrc`, `.env`, client data or generated output is included.
+- Next: Day 06 — sortable board and saved filter views, after this PR's delivery gates.
