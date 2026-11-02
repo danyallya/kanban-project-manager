@@ -15,7 +15,7 @@ Nexus returned 404 for packages used by this project. Following the user's appro
 | 02 | **Done** — adjacent-stage buttons, focused task detail and rejected-drop feedback; PR #4 merged through the GitHub panel. |
 | 03 | **Done** — validated task editor for title, current owner, date-only due date and priority; column quick-add keeps its chosen stage. PR #5 was reviewed and merged to `main`; see the Day 04 reconciliation and workspace receipt. |
 | 04 | **Done** — add an accessible project switcher, project-scoped board/counts, preserved task-stage state across switches, and create tasks in the selected project. |
-| 05 | Add filter chips for owner, due date, priority and tag. |
+| 05 | **Done** — add combinable owner, due-window, priority and tag filters with removable chips and clear-all. |
 | 06 | Add sortable board and saved filter views. |
 | 07 | Review week-one board interactions, add tests and fix keyboard/drag defects. |
 | 08 | Add local persistence with migration-safe storage adapter. |
@@ -49,7 +49,8 @@ Mark each day Done, In progress or Blocked after work. Update new findings and k
 - Day 03: Done. The required title, owner initials, date-only due date and priority are validated before a task is created. Stage-specific column quick-add is preserved. PR #5 merged after the earlier browser warning was resolved; its merge receipt is reconciled in the Day 04 log.
 - Day 04: Done. The native project selector scopes task cards and column counts, leaves each task's stage in shared session state, and determines the new-task destination. At All projects, creation defaults to Atelier / New work.
 - Review follow-up for Issue #3: the Day 03 editor already routes quick-add into its selected column; expanded regression coverage now checks all four displayed column actions and their derived counts. Close the issue after the follow-up PR merges.
-- Next: Day 05 — add filter chips for owner, due date, priority and tag.
+- Day 05: Done in code; board filters combine owner, overdue/next-seven-days/later due windows, priority and label. Removable chips and Clear all reset state; visible board and column counts track filtered results. Automated checks pass; PR panel delivery is pending.
+- Next: Day 06 — sortable board and saved filter views, after Day 05 delivery gates.
 
 ## Process change effective Day 02 — 2026-10-27
 

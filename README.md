@@ -36,3 +36,7 @@ Each task title opens a non-modal detail region and focuses its heading. Close o
 ## Task creation
 
 New tasks use an editor that requires a title, an owner from the initials already shown on task cards, a valid calendar due date and a supported priority. Field errors are linked to their controls, the first invalid field receives focus, and a valid submission announces the new stage and focuses the created task. Column quick-add creates the task in the column that opened the editor; a search is cleared after creation so the new task is visible. The editor names the selected destination project, and new tasks use its Planning label. All changes remain in local React state and reset on reload.
+
+## Board filters
+
+The Filter control combines owner, due-date window (overdue, next seven days or later), priority and tag. Active criteria appear as removable chips, and Clear all restores the unfiltered board. Board and column counts follow the visible filter results. Due windows use the local calendar date; task records remain fictional and local to the current page session.

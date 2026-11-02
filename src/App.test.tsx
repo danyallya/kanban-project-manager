@@ -29,4 +29,21 @@ describe('Atelier Project Desk', () => {
     expect(within(inProgress).getByRole('button', { name: 'Finalize spring campaign direction' })).toBeInTheDocument();
     expect(screen.getByRole('status')).toHaveTextContent('Showing Northstar / Brand launch.');
   });
+
+  it('filters tasks by owner, priority and tag, and supports clearing the chips', () => {
+    render(<App />);
+    fireEvent.click(screen.getByRole('button', { name: /^Filter/ }));
+    fireEvent.change(screen.getByRole('combobox', { name: 'Filter by owner' }), { target: { value: 'AM' } });
+    fireEvent.change(screen.getByRole('combobox', { name: 'Filter by priority' }), { target: { value: 'Low' } });
+    fireEvent.change(screen.getByRole('combobox', { name: 'Filter by tag' }), { target: { value: 'design' } });
+
+    expect(screen.getByRole('button', { name: 'Share revised mobile wireframes' })).toBeInTheDocument();
+    expect(screen.queryByRole('button', { name: 'Finalize spring campaign direction' })).not.toBeInTheDocument();
+    expect(screen.getByRole('button', { name: 'Remove Owner: AM filter' })).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: /Board\s+1/ })).toBeInTheDocument();
+
+    fireEvent.click(screen.getByRole('button', { name: 'Clear all' }));
+    expect(screen.getByRole('button', { name: 'Finalize spring campaign direction' })).toBeInTheDocument();
+    expect(screen.queryByLabelText('Active filters')).not.toBeInTheDocument();
+  });
 });
